@@ -1,7 +1,21 @@
 pulse
 systemd
-fontforge
 go
+.zshenv
+
+# config folder
+Electron
+OpenRGB
+Signal
+dconf
+discord
+fontforge
+gh
 github-copilot
 glab-cli
+database
+nextjs-nodejs
+rog
+session
+slimbookbattery
 
