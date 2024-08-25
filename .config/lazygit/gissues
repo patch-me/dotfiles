@@ -1,0 +1,2 @@
+remote=$(git remote get-url origin 2>/dev/null | grep -oE "github|gitlab" || echo "none"); [ "$remote" = "gitlab" ] && glab issue list -O json | jq -r "sort_by(.id) | .[] | \"#\(.iid) TITLE:\(.title)\"" || { [ "$remote" = "github" ] && gh issue list --json number,title | jq -r "sort_by(.number) | .[] | \"#\(.number) TITLE:\(.title)\""; }
+
