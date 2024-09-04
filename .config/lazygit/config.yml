@@ -77,7 +77,8 @@ customCommands:
       - type: "menuFromCommand"
         title: "Which remote repository to push to?"
         key: "Issue"
-        command: bash -c "gissues"
+        command: >-
+          bash -c "glab issue list -O json | jq -r 'sort_by(.id) | .[] | \"#\\(.iid) TITLE:\\(.title)\"'"
         filter: '#(?P<id>\d+) TITLE:(?P<title>.*)'
         valueFormat: "{{ .id }}"
         labelFormat: "#{{ .id | bold | cyan }} Title:{{.title | bold | red}}"
