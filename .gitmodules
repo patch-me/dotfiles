@@ -31,3 +31,6 @@
 [submodule ".config/zsh/plugins/conda-zsh-completion"]
 	path = .config/zsh/plugins/conda-zsh-completion
 	url = https://github.com/conda-incubator/conda-zsh-completion.git
+[submodule ".config/tpm/plugins/tpm"]
+	path = .config/tpm/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
