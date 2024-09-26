@@ -4,9 +4,6 @@
 [submodule ".config/zsh/plugins/fzf-zsh-plugin"]
 	path = .config/zsh/plugins/fzf-zsh-plugin
 	url = https://github.com/unixorn/fzf-zsh-plugin.git
-[submodule ".config/zsh/plugins/zsh-you-should-use"]
-	path = .config/zsh/plugins/zsh-you-should-use
-	url = https://github.com/MichaelAquilina/zsh-you-should-use.git
 [submodule ".config/zsh/plugins/zsh-autopair"]
 	path = .config/zsh/plugins/zsh-autopair
 	url = https://github.com/hlissner/zsh-autopair
@@ -28,3 +25,9 @@
 [submodule "nnn"]
 	path = nnn
 	url = https://github.com/jarun/nnn.git
+[submodule ".config/zsh/plugins/you-should-use"]
+	path = .config/zsh/plugins/you-should-use
+	url = https://github.com/MichaelAquilina/zsh-you-should-use.git
+[submodule ".config/zsh/plugins/conda-zsh-completion"]
+	path = .config/zsh/plugins/conda-zsh-completion
+	url = https://github.com/conda-incubator/conda-zsh-completion.git
