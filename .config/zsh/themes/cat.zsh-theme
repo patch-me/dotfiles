@@ -86,5 +86,5 @@ fish_mode_prompt() {
 
 # Main prompt
 PROMPT='%{$(slavic_color_echo $slavic_color_purple "$(slavic_current_folder)")%}$(slavic_git_status)
-$(slavic_color_echo $slavic_color_pink "⫸  ")'
+$(slavic_color_echo $slavic_color_pink "# ")'
 
