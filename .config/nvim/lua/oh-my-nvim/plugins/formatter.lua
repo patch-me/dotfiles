@@ -8,7 +8,7 @@ return {
 		conform.setup({
 			formatters_by_ft = {
 
-				python = { "black", "ruff_formatter" },
+				python = { "black", "ruff" },
 				rust = { "rustfmt" },
 				c = { "clang-format" },
 				cpp = { "clang-format" },
@@ -19,6 +19,7 @@ return {
 				typescript = { "prettier" },
 				javascriptreact = { "prettier" },
 				typescriptreact = { "prettier" },
+				vue = { "prettier" },
 				svelte = { "prettier" },
 				css = { "prettier" },
 				html = { "prettier" },
@@ -30,6 +31,9 @@ return {
 				graphql = { "prettier" },
 				lua = { "stylua" },
 				java = { "google-java-format" },
+				proto = { "buf" },
+				kotlin = { "ktfmt" },
+				go = { "gofumpt" },
 			},
 			format_on_save = {
 				lsp_fallback = true,

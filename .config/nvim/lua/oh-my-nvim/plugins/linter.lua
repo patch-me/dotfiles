@@ -19,6 +19,10 @@ return {
 			svelte = { "eslint_d" },
 			ansible = { "ansible_lint" },
 			java = { "checkstyle" },
+			proto = { "protolint" },
+			kotlin = { "ktlint" },
+			markdown = { "markdownlint" },
+			go = { "gospel" },
 		}
 
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
