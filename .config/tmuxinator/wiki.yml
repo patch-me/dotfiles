@@ -1,0 +1,9 @@
+# /home/thomas/.config/tmuxinator/wiki.yml
+
+name: wiki
+root: ~/documents/4_wiki/
+
+windows:
+  - wiki:
+      panes:
+        - nvim .

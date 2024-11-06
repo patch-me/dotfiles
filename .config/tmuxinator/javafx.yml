@@ -1,0 +1,11 @@
+name: javafx
+root: ~/
+root: ~/documents/2_school/project-javafx/
+
+windows:
+  - editor:
+      panes:
+        - nvim .
+  - minio:
+      panes:
+        - docker compose up

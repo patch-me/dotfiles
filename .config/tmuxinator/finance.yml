@@ -1,0 +1,19 @@
+# /home/thomas/.config/tmuxinator/finance.yml
+
+name: finance
+root: ~/documents/1_project/finance-tracking/
+
+windows:
+  - fintrack:
+      panes:
+        - setup:
+            - nvim .
+  - docker:
+      panes:
+        - setup:
+            - docker compose up
+  - codium:
+      root: ~/documents/1_project/ocr-receipts/
+      panes:
+        - setup:
+            - codium .

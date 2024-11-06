@@ -1,0 +1,9 @@
+name: mypatch
+root: ~/
+
+windows:
+  - mypatch:
+      panes:
+        - ssh ripitchip@mypatch.fr
+  - k9s:
+      panes: k9s

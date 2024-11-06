@@ -1,0 +1,13 @@
+# /home/thomas/.config/tmuxinator/music.yml
+
+name: music
+root: ~/
+attach: false
+
+windows:
+  - ncmpcpp:
+      layout: main-vertical
+      panes:
+        - music:
+            - mpc ls | mpc add && mpc random on
+            - ncmpcpp

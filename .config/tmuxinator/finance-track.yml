@@ -1,0 +1,7 @@
+name: finance-track
+root: ~/documents/1_project/finance-tracking/
+
+windows:
+  - code:
+      panes:
+        - source .nox/dev-3-11/bin/activate &&   codium . && nvim .
