@@ -43,7 +43,10 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/theprimeagen/packer.lua<CR>");
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
-
+vim.keymap.set("n", "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>");
+vim.keymap.set("n", "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>");
+vim.keymap.set("n", "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>");
+vim.keymap.set("n", "<c-j>", "<cmd><C-U>TmuxNavigateRight<cr>");
 -- vim.keymap.set("n", "<leader><leader>", function()
 --     vim.cmd("so")
 -- end)
