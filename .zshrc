@@ -22,6 +22,7 @@ plugins=(
     zsh-lsd
     rust
     conda-zsh-completion
+    tmuxinator
 )
 
 alias mutt="neomutt"
@@ -29,22 +30,36 @@ alias mutt="neomutt"
 source $ZSH/oh-my-zsh.sh
 unset zle_bracketed_paste
 
-if [ "$TMUX" = "" ]; then exec tmux; fi
+# if [ "$TMUX" = "" ]; then exec tmux; fi
 
 # [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/ripitchip/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('$HOME/.local/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/ripitchip/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/ripitchip/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "$HOME/.local/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/.local/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/ripitchip/miniconda3/bin:$PATH"
+        export PATH="$HOME/.local/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/thomas/.dart-cli-completion/zsh-config.zsh ]] && . /home/thomas/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+
+
+# pnpm
+export PNPM_HOME="/home/thomas/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
