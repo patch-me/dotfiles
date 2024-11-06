@@ -28,12 +28,14 @@ return {
 				yaml = { "prettier" },
 
 				markdown = { "prettier" },
+				md = { "prettier" },
 				graphql = { "prettier" },
 				lua = { "stylua" },
 				java = { "google-java-format" },
 				proto = { "buf" },
 				kotlin = { "ktfmt" },
 				go = { "gofumpt" },
+				toml = { "taplo" },
 			},
 			format_on_save = {
 				lsp_fallback = true,

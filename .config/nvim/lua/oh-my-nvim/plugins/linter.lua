@@ -22,6 +22,7 @@ return {
 			proto = { "protolint" },
 			kotlin = { "ktlint" },
 			markdown = { "markdownlint" },
+			md = { "markdownlint" },
 			go = { "gospel" },
 		}
 
