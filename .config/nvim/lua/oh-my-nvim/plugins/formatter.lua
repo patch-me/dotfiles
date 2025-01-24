@@ -36,6 +36,8 @@ return {
 				kotlin = { "ktfmt" },
 				go = { "gofumpt" },
 				toml = { "taplo" },
+				dart = { "dart_format" },
+				xml = { "xmllint" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
