@@ -18,20 +18,18 @@ static const char *colors[][3] = {
     [SchemeSel] = {col_front_dark, col_background, col_background},
 };
 
-static const char *const autostart[] = {
-    "sh",
-    "/etc/screen/layout.sh",
-    NULL,
-    "feh",
-    "--scale-down",
-    "--bg-fill",
-    "/etc/images/banana.png",
-    NULL,
-    "picom",
-    "-b",
-    NULL,
-    NULL /* terminate */
-};
+static const char *const autostart[] = {"sh",
+                                        "/etc/screen/layout.sh",
+                                        NULL,
+                                        "feh",
+                                        "--scale-down",
+                                        "--bg-fill",
+                                        "/etc/images/banana.png",
+                                        NULL,
+                                        "picom",
+                                        "-b",
+                                        NULL,
+                                        NULL};
 
 /* tagging */
 static const char *tags[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
@@ -42,6 +40,7 @@ static const Rule rules[] = {
      *	WM_NAME(STRING) = title
      */
     /* class      instance    title       tags mask     isfloating   monitor */
+    {NULL, NULL, "Android Emulator - android32:5554", 0, 1, -1},
     {"Gimp", NULL, NULL, 0, 1, -1},
     {"Firefox", NULL, NULL, 1 << 8, 0, -1},
 };
