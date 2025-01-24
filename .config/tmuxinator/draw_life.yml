@@ -1,0 +1,22 @@
+# /home/thomas/.config/tmuxinator/draw_life.yml
+
+name: draw_life
+root: ~/documents/1_projects/draw_life
+
+windows:
+  - api:
+      root: ~/documents/1_projects/draw-life/draw_life_backend/
+      panes:
+        - uv run --group dev nvim .
+  - api_dev:
+      root: ~/documents/1_projects/draw-life/draw_life_backend/
+      panes:
+        - uv run --group dev fastapi dev src/main.py
+  - docs:
+      root: ~/documents/1_projects/draw-life/draw_life_backend/
+      panes:
+        - uv run --group docs sphinx-autobuild docs docs/_build/html --port 9000
+  - app:
+      root: ~/documents/1_projects/draw-life/draw_life_app/
+      panes:
+        - nvim .

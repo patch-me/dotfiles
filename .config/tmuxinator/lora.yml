@@ -1,0 +1,8 @@
+# /home/thomas/.config/tmuxinator/lora.yml
+
+name: lora
+root: ~/documents/1_projects/ttgo-lora-message/
+
+windows:
+  - main:
+      layout: main-vertical
