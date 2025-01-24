@@ -63,3 +63,13 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+function zshaddhistory() {
+    # Prevent commands starting with "sha256sum" or "passGen" from being added to history
+    [[ $1 == sha256sum* || $1 == passGen* ]] && return 1
+    return 0
+}
+passGen() {
+  echo -n "$1" | sha256sum | awk '{print $1}' | xxd -r -p | base64
+}
+
+neofetch
