@@ -37,7 +37,7 @@ return {
 				go = { "gofumpt" },
 				toml = { "taplo" },
 				dart = { "dart_format" },
-				xml = { "xmllint" },
+				xml = { "xmlformatter" },
 			},
 			format_on_save = {
 				lsp_fallback = true,

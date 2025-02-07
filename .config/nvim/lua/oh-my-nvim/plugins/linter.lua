@@ -24,6 +24,7 @@ return {
 			markdown = { "markdownlint" },
 			md = { "markdownlint" },
 			go = { "gospel" },
+			-- json = { "jsonlint" },
 		}
 
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })

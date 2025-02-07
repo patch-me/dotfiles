@@ -6,6 +6,7 @@ return {
 		"hrsh7th/cmp-nvim-lsp",
 		"VonHeikemen/lsp-zero.nvim",
 		"folke/neodev.nvim",
+		"b0o/schemastore.nvim",
 	},
 	config = function()
 		local lspconfig = require("lspconfig")
@@ -102,6 +103,27 @@ return {
 		lspconfig.marksman.setup({})
 		lspconfig.texlab.setup({})
 		lspconfig.dartls.setup({})
+		lspconfig.ccls.setup({})
+		lspconfig.lemminx.setup({})
+		lspconfig.yamlls.setup({
+			settings = {
+				yaml = {
+					schemaStore = {
+						enable = false,
+						url = "",
+					},
+					schemas = require("schemastore").yaml.schemas(),
+				},
+			},
+		})
+		lspconfig.jsonls.setup({
+			settings = {
+				json = {
+					schemas = require("schemastore").json.schemas(),
+					validate = { enable = true },
+				},
+			},
+		})
 	end,
 	-- LSP Support
 }
